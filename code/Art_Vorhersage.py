@@ -28,7 +28,8 @@ X_train, X_test, Y_train, Y_test = model_selection.train_test_split(
 		test_size=test_size,    
 		random_state=seed)
 
-knn = KNeighborsClassifier()knn.fit(X_train, Y_train)
+knn = KNeighborsClassifier()
+knn.fit(X_train, Y_train)
 predictions = knn.predict(X_test)
 
 report = classification_report(Y_test, predictions, output_dict=True)
